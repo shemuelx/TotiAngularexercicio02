@@ -1,0 +1,30 @@
+<h2 id="requirements">Personagens</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="lead">Personagens e suas características</p>
+
+          <ul class="lead">
+
+            <li *ngFor='let personaje of personajes'>
+
+              <b>{{ personaje.name | titlecase }}</b>
+
+              <ul>
+                <li>Alias: {{ personaje.username }}</li>
+                <li>Endereço : {{ personaje.address.city }}</li>
+                <li>Cep : {{ personaje.address.zipcode }}</li>
+                <li>Sitio Web : {{ personaje.website }}</li>
+                <li>Tech : {{ personaje.company.bs }}</li>                
+              </ul>
+
+            </li>            
+            
+          </ul>
+
+        </div>
+        <div class="col-sm-6">
+          <blockquote class="lead">
+            Aqui estão os personagens mais legais da galáxia!
+          </blockquote>
+        </div>
+      </div>
